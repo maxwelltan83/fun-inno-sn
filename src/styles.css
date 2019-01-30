@@ -6,6 +6,18 @@
     background-size: cover;
 } */
 
+a:hover {
+    color: dodgerblue !important;
+    /* color: white !important; */
+    /* cursor: progress; */
+    background-color: rgb(233, 233, 233);
+}
+
+.active {
+    /* color: rebeccapurple !important; */
+    background-color: lightskyblue !important;
+}
+
 .bg-transparent {
     /* opacity: 0.4; */
     background-color:rgba(0, 0, 0, 0.8);
