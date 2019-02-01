@@ -4,16 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { AppStringService } from './private/app-string.service';
+import { DataStorageService } from './private/data-storage.service';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth-guard.service';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
-import { DropdownDirective } from './shared/dropdown.directive';
-import { AppRoutingModule } from './app-routing.module';
-import { AppStringService } from './private/app-string.service';
-import { AuthService } from './auth/auth.service';
-import { AuthGuard } from './auth/auth-guard.service';
-import { DataStorageService } from './shared/data-storage.service';
+import { NotificationComponent } from './notification/notification.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DataStorageService } from './shared/data-storage.service';
     SignupComponent,
     HeaderComponent,
     HomeComponent,
-    DropdownDirective
+    DropdownDirective,
+    NotificationComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

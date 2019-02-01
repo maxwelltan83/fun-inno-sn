@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+<nav class="navbar navbar-expand-lg navbar-light d-flex align-items-center p-2 my-2 text-dark-50 bg-light rounded shadow-sm">
   <a class="navbar-brand">
     <img src="/assets/img/_ionicons_svg_ios-rocket.svg" width="30" height="30" class="d-inline-block align-top" alt="?">
     FunIno
@@ -14,21 +15,27 @@
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" routerLink="/home">
               <!-- Home -->
-              <img src="/assets/img/_ionicons_svg_md-cube.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
+              <img src="/assets/img/_ionicons_svg_md-home.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
             </a>
           </li>
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" routerLink="/profile">
-              <!-- Profile -->
-              <img src="/assets/img/_ionicons_svg_md-person.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
+              <!-- Chat -->
+              <img src="/assets/img/_ionicons_svg_md-chatboxes.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
             </a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="/email">
-                <!-- Email -->
-                <img src="/assets/img/_ionicons_svg_md-mail.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
-              </a>
-            </li>
+            <a class="nav-link" routerLink="/email">
+              <!-- Email -->
+              <img src="/assets/img/_ionicons_svg_md-mail.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
+            </a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/email">
+              <!-- Analytics -->
+              <img src="/assets/img/_ionicons_svg_md-analytics.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
+            </a>
+          </li>
           <!-- <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/notification">Notificaton</a></li> -->
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" routerLink="/notification">
@@ -66,8 +73,8 @@
         <!-- <li class="nav-item dropdown" appDropdown *ngIf="authService.isAuthenticated()"> -->
         <li class="nav-item dropdown" appDropdown>
           <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
-            <!-- Settings -->
-            <img src="/assets/img/_ionicons_svg_md-hammer.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
+            <!-- Profile -->
+            <img src="/assets/img/_ionicons_svg_md-person.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <!-- <a class="dropdown-item" (click)="onSaveData()">Save Data</a>
