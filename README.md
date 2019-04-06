@@ -1,5 +1,10 @@
 # FunInnoSn
 
+A project I work on during my Bachelor of Computer Scence (Oxford Brookes University)
+
+A platform that helps the community generate an idea, innovate, collaborate, get feedback and
+be inspired. It gives the opportunity the user to unleash their own creative idea.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## Development server
