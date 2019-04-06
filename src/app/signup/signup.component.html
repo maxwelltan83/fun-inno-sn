@@ -1,34 +1,29 @@
-<!-- <div class="container">
+<br>
+<br>
+<br>
+<br>
+<div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <br>
-      <br>
-      <form class="form-signin text-center">
-        <img class="mb-4" src="./assets/img/work-inprogress-logo.png" alt="?" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-        <br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-        <p class="mt-5 mb-3 text-muted">© 2018-2019</p>
-      </form>
+    <div class="col-lg-8 d-flex justify-content-center align-items-end flex-row pb-5">
+      <div>
+      <h1 class="h1 mb-3 font-weight-bolder">FunInno</h1>
+      <h3 class="h3 mb-3 font-weight-light">Have an idea? Why not signup with us and share an idea with people around the world. A community talking about new idea around the world. Be inspired, creative and innovate.</h3>
+      </div>
+    </div>
+    <div class="col-lg-4 vertical-line">
+      <div class="container-fluid d-flex justify-content-center align-items-center pt-5">
+        <form class="form-signin text-center" (ngSubmit)="onSignUp(ngForm)" #ngForm="ngForm">
+          <img class="mb-4" src="./assets/img/_ionicons_svg_ios-rocket.svg" alt="?" width="72" height="72">
+          <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+          <label for="email" class="sr-only">Email address</label>
+          <input ngModel type="email" id="email" name="emailTextBox" class="form-control" placeholder="Email address" required="" autofocus="">
+          <label for="password" class="sr-only" style="margin-top: 10px;">Password</label>
+          <input ngModel type="password" id="password" name="passwordTextBox" class="form-control" placeholder="Password" required="" style="margin-top: 10px;">
+          <br>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+          <p class="mt-5 mb-3 text-body">© 2018-2019</p>
+        </form>
+      </div>
+    </div>
   </div>
-</div> -->
-<br>
-<br>
-<!-- <div class="container d-flex align-items-center p-3 my-3 text-dark-50 bg-light rounded shadow-sm"> -->
-<div class="container-fluid d-flex justify-content-center align-items-center">
-  <form class="form-signin text-center">
-    <img class="mb-4" src="./assets/img/_ionicons_svg_ios-rocket.svg" alt="?" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-    <label for="inputPassword" class="sr-only" style="margin-top: 10px;">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" style="margin-top: 10px;">
-    <br>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-    <p class="mt-5 mb-3 text-muted">© 2018-2019</p>
-  </form>
 </div>

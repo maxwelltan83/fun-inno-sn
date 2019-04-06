@@ -1,0 +1,56 @@
+<div class="align-items-center p-3 my-3 text-dark-50 bg-light rounded shadow-sm">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pb-2 mb-2 border-bottom">
+    <h1 class="h2">Top Contributor</h1>
+  </div>
+
+  <div class="flex-wrap flex-md-nowrap pt-4 pb-2 mb-2">
+    <div class="row">
+      <div class="col-lg-4 d-flex align-items-center flex-column">
+        <img class="rounded-circle" width="100" height="100" src="/assets/img/_ionicons_svg_md-contact.svg" alt="???">
+        <h4 class="pt-2">@Mushroom</h4>
+      </div>
+
+      <div class="col-lg-4 d-flex align-items-center flex-column">
+        <img class="rounded-circle" width="100" height="100" src="/assets/img/_ionicons_svg_md-contact.svg" alt="???">
+        <h4 class="pt-2">@Star</h4>
+      </div>
+
+      <div class="col-lg-4 d-flex align-items-center flex-column">
+        <img class="rounded-circle" width="100" height="100" src="/assets/img/_ionicons_svg_md-contact.svg" alt="???">
+        <h4 class="pt-2">@Charmander</h4>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<div class="align-items-center p-3 my-3 text-dark-50 bg-light rounded shadow-sm">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pb-2 mb-2 border-bottom">
+    <h1 class="h2">Idea Statistics</h1>
+  </div>
+
+  <div class="d-flex justify-content-center flex-wrap flex-md-nowrap pt-4 pb-2 mb-2">
+    <canvas baseChart
+      [data]="doughnutChartData"
+      [labels]="doughnutChartLabels"
+      [chartType]="doughnutChartType"
+      (chartHover)="onDoughnutChartHovered($event)"
+      (chartClick)="onDoughnutChartClicked($event)"></canvas>
+  </div>
+</div>
+
+<div class="align-items-center p-3 my-3 text-dark-50 bg-light rounded shadow-sm">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pb-2 mb-2 border-bottom">
+    <h1 class="h2">Your Contribution</h1>
+  </div>
+
+  <div class="d-flex justify-content-center flex-wrap flex-md-nowrap pt-4 pb-2 mb-2">
+    <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      (chartHover)="onBarChartHovered($event)"
+      (chartClick)="onChartClicked($event)"></canvas>
+  </div>
+</div>

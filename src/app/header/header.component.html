@@ -1,9 +1,8 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
-<nav class="navbar navbar-expand-lg navbar-light d-flex align-items-center p-2 my-2 text-dark-50 bg-light rounded shadow-sm">
-  <a class="navbar-brand">
-    <img src="/assets/img/_ionicons_svg_ios-rocket.svg" width="30" height="30" class="d-inline-block align-top" alt="?">
-    FunIno
-  </a>
+<nav class="navbar navbar-expand-lg d-flex align-items-center p-2 text-dark-50 bg-light rounded shadow-sm">
+  <div class="navbar-brand logo-word">
+    <img src="/assets/img/_ionicons_svg_ios-rocket.svg" width="30" height="30" class="d-inline-block align-top" alt="???">
+    <strong><i>funInno</i></strong>
+  </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
     <span class="navbar-toggler-icon"></span>
@@ -11,86 +10,68 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <!-- <ng-template [ngIf]="authService.isAuthenticated()"> -->
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/home">
-              <!-- Home -->
-              <img src="/assets/img/_ionicons_svg_md-home.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
-            </a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/profile">
-              <!-- Chat -->
-              <img src="/assets/img/_ionicons_svg_md-chatboxes.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
-            </a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/email">
-              <!-- Email -->
-              <img src="/assets/img/_ionicons_svg_md-mail.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
-            </a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/email">
-              <!-- Analytics -->
-              <img src="/assets/img/_ionicons_svg_md-analytics.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
-            </a>
-          </li>
-          <!-- <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/notification">Notificaton</a></li> -->
+        <ng-template [ngIf]="isAuth()">
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" routerLink="/notification">
               <!-- Notification -->
-              <img src="/assets/img/_ionicons_svg_md-alert.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
-              <span class="badge badge-pill bg-light align-text-bottom">27</span>
+              <img src="/assets/img/_ionicons_svg_md-notifications.svg" width="25" height="25" class="d-inline-block align-top" alt="???">
+              <span class="badge badge-pill badge-danger">3</span>
             </a>
           </li>
-        <!-- </ng-template> -->
+        </ng-template>
       </ul>
-      <form class="form-inline my-2 my-md-0">
-        <input class="form-control" type="text" placeholder="Search">
+
+      <form class="form-inline">
+        <ng-template [ngIf]="isAuth()">
+          <!-- Search Bar -->
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+            <img src="/assets/img/_ionicons_svg_md-search.svg" width="24" height="24" class="d-inline-block align-top" alt="???">
+          </button>
+        </ng-template>
       </form>
+
       <ul class="navbar-nav">
-        <!-- <ng-template [ngIf]="!authService.isAuthenticated()"> -->
-          <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/signup">Signup</a></li>
+        <ng-template [ngIf]="!isAuth()">
+          <li class="nav-item" routerLinkActive="active">
+            <!-- Sign Up -->
+            <a class="nav-link" routerLink="/signup">Signup</a>
+          </li>
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" routerLink="/signin">
-              <!-- Login -->
-              <img src="/assets/img/_ionicons_svg_md-log-in.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
+              <img src="/assets/img/_ionicons_svg_md-log-in.svg" width="25" height="25" class="d-inline-block align-top" alt="???">
+              Login
             </a>
           </li>
-        <!-- </ng-template> -->
-        <!-- <ng-template [ngIf]="authService.isAuthenticated()"> -->
-          <!-- <li class="nav-item"><a class="nav-link" (click)="onLogout()">Logout</a></li> -->
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/signin">
-              <!-- Logout -->
-              <img src="/assets/img/_ionicons_svg_md-log-out.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
-            </a>
-          </li>
-        <!-- </ng-template> -->
+        </ng-template>
       </ul>
+
       <ul class="navbar-nav">
-        <!-- <li class="nav-item dropdown" appDropdown *ngIf="authService.isAuthenticated()"> -->
-        <li class="nav-item dropdown" appDropdown>
+        <li class="nav-item dropdown" appDropdown *ngIf="isAuth()">
           <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
             <!-- Profile -->
-            <img src="/assets/img/_ionicons_svg_md-person.svg" width="25" height="25" class="d-inline-block align-top" alt="?">
+            <img src="/assets/img/_ionicons_svg_md-contact.svg" width="25" height="25" class="d-inline-block align-top" alt="???">
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <!-- <a class="dropdown-item" (click)="onSaveData()">Save Data</a>
-            <a class="dropdown-item" (click)="onFetchData()">Fetch Data</a> -->
-            <a class="dropdown-item">Save Data</a>
-            <a class="dropdown-item">Fetch Data</a>
+            <div class="dropdown-item">
+              <img src="/assets/img/_ionicons_svg_md-contact.svg" width="25" height="25" class="d-inline-block align-top" alt="???">
+              @Mushroom
+            </div>
+            <hr>
+            <a class="dropdown-item" routerLink="/profile">
+              <img src="/assets/img/_ionicons_svg_md-person.svg" width="25" height="25" class="d-inline-block align-top" alt="???">
+              Profile
+            </a>
+            <a class="dropdown-item" routerLink="/settings">
+              <img src="/assets/img/_ionicons_svg_md-settings.svg" width="25" height="25" class="d-inline-block align-top" alt="???">
+              Settings
+            </a>
+            <a class="dropdown-item" (click)="onLogout()">
+              <img src="/assets/img/_ionicons_svg_md-log-out.svg" width="25" height="25" class="d-inline-block align-top" alt="???">
+              Logout
+            </a>
           </div>
         </li>
-        <!-- <li class="nav-item dropdown show">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dropdown</a>
-          <div class="dropdown-menu show" aria-labelledby="dropdown03">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li> -->
       </ul>
   </div>
 </nav>
